@@ -13,6 +13,6 @@ COPY config.json .
 
 RUN chmod +x ./xray
 
-EXPOSE 3000
+EXPOSE 443
 
 CMD ["./xray", "-c", "config.json"]
