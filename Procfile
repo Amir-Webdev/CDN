@@ -1,0 +1,1 @@
+web: ./xray -c ./config.json
