@@ -9,7 +9,7 @@
       "settings": {
         "clients": [
           {
-            "id": "REPLACE-WITH-UUID",
+            "id": "1e7c27bf-d03f-450a-b0e5-705b1e52c05e",
             "flow": "xtls-rprx-vision"
           }
         ],
@@ -23,7 +23,7 @@
           "alpn": ["http/1.1"]
         },
         "wsSettings": {
-          "path": "/stealth-path"
+          "path": "/status-check"
         }
       }
     }
