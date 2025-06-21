@@ -19,7 +19,10 @@
         "network": "ws",
         "security": "none",
         "wsSettings": {
-          "path": "/status-check"
+          "path": "/status-check",
+          "headers": {
+            "Host": "cdn.barsysco.com"
+          }
         }
       }
     }
