@@ -1,6 +1,8 @@
-FROM alpine:latest
+FROM debian:bullseye-slim
 
-RUN apk add --no-cache curl ca-certificates
+RUN apt-get update && \
+    apt-get install -y curl ca-certificates && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
@@ -11,7 +13,6 @@ COPY config.json .
 
 RUN chmod +x ./xray
 
-# Optional: Document internal port for humans
 EXPOSE 3000
 
-CMD ["./xray", "-c", "./config.json"]
+CMD ["./xray", "-c", "config.json"]
