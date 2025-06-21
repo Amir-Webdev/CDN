@@ -6,6 +6,9 @@ RUN apk add --no-cache curl ca-certificates
 # Set working directory
 WORKDIR /app
 
+# Use env PORT from Railway
+ENV PORT=3000
+
 # Copy files into container
 COPY xray .
 COPY geoip.dat .
