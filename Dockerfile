@@ -1,7 +1,7 @@
 FROM debian:bullseye-slim
 
 RUN apt-get update && \
-    apt-get install -y curl ca-certificates && \
+    apt-get install -y curl ca-certificates python3 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
@@ -14,6 +14,6 @@ COPY start.sh .
 
 RUN chmod +x ./xray ./start.sh
 
-EXPOSE 3000
+EXPOSE 80 3000
 
 CMD ["./start.sh"]
