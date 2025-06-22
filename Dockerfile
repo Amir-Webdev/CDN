@@ -15,4 +15,5 @@ RUN chmod +x ./xray
 
 EXPOSE 3000
 
-CMD ["./xray", "-c", "config.json"]
+# Run Xray in the background and keep the container alive
+CMD ./xray -c config.json & tail -f /dev/null
